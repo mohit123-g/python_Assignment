@@ -26,14 +26,15 @@ def ds(roll_no,name):
 
      print()
      new_roll=int(input("Enter new roll_no:"))
-     new_name=input("Enter new name:")
+     new_name=input("Enter new name:")              
 
-     ls[0]=[new_roll,new_name]
-     tu=((new_roll,new_name))
+     ls.extend([new_roll,new_name])
+     tu2=((new_roll,new_name))
+     tu+=tu2
      se.update((new_roll,new_name)) 
-     dis["roll_no"]=new_roll
-     dis["name"]=new_name
-
+     d={"roll_no":new_roll,"name":new_name}
+     dis.update(d)
+    
      print()
      print("After modify of values of data structure:")
      print("updated values of list:",ls)
