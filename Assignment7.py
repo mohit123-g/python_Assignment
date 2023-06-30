@@ -11,11 +11,10 @@ def Func(rollno,name,Class,file="file1.txt"):
          f.writelines(["rollno={0}, name={1}, class={2}".format(rollno,name,Class)])
          f.seek(0)
          print(f.readlines())
-     except:
-          if(IOError):
-              print("Exception is handled by io error")
+     except IOError:
+         print("Exception is handled by io error")
      finally:
-        print("file read and write successfull")
+         print("file read and write successfull")
 
 
 roll=int(input("enter your roll no:"))
