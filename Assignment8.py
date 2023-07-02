@@ -25,7 +25,6 @@ class B(A):
          print("This is class B")
          try:
               print("a=",self.__a)
-              raise AttributeError
          except AttributeError as t:
               print("Error:you are trying to access private member of base class!")
          print("b=%d"%(self._b))
