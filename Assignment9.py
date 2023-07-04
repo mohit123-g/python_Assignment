@@ -13,7 +13,9 @@ b=True
 fobj=ac.FileHandle()
 try:   
       while(b==True):
-           print("enter r to open this file in read mode\n"\
+           print(       
+       "enter c to create a file\n"\
+       "enter r to open this file in read mode\n"\
        "enter w to open this file in write mode\n"\
        "enter a to open this file in append mode\n"\
        "enter t to open this file in text mode\n"\
@@ -21,7 +23,9 @@ try:
        "enter u to open this file in binary mode\n"
                )
            ch=input("enter your choice:")
-           if(ch=="r"):
+           if(ch=="c"):
+               fobj.FileCreate(input("Enter file name which u want to create:"))
+           elif(ch=="r"):
                fobj.FileRead(input("Enter file name which u want to open in read mode:"))
            elif(ch=="w"):
                 fobj.FileWrite(input("Enter file name which u want to open in write mode:"))
