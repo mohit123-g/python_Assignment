@@ -8,19 +8,18 @@ import Assignment9Class as ac
 class InvalidChoice(Exception):
     def __init__(self,args):
         super().__init__(args)
-
 b=True
 fobj=ac.FileHandle()
 try:   
       while(b==True):
            print(       
-       "enter c to create a file\n"\
+       "enter c to create a new file\n"\
        "enter r to open this file in read mode\n"\
        "enter w to open this file in write mode\n"\
        "enter a to open this file in append mode\n"\
        "enter t to open this file in text mode\n"\
        "enter b to open this file in binary mode\n"\
-       "enter u to open this file in binary mode\n"
+       "enter u to open this file in update mode\n"
                )
            ch=input("enter your choice:")
            if(ch=="c"):
