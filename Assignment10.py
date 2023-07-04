@@ -9,16 +9,16 @@
 import tkinter as tk
 import webbrowser as wb
 
-obj=tk.Tk(className="MOhit")
+obj=tk.Tk(className="Search")
 
 e=tk.Entry(obj,font=("Time New Roman",20),width=30)
 def Nav():
     n=e.get()
     print("user entered text is:"+n)
-    print(f"you are navigating to www.{n}.com'")
-    wb.open("www."+n+".com")
-l1=tk.Label(obj,text="Enter name of any website:",font=("Time New Roman",30))
-b1=tk.Button(obj,text="Search",font=("Time New Roman",30),command=Nav,bg="blue")
+    print(f"you are navigating to https://www.youtube.com/results?search_query={n}")
+    wb.open("https://www.youtube.com/results?search_query="+n)
+l1=tk.Label(obj,text="Enter name of any youtube channel:",font=("Time New Roman",30))
+b1=tk.Button(obj,text="Navigate",font=("Time New Roman",30),command=Nav,bg="blue")
 l1.grid(row=0,column=0)
 e.grid(row=1,column=0)
 b1.grid(row=2,column=0)
