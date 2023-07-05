@@ -11,6 +11,7 @@
 
 import tkinter as tk
 import webbrowser as wb
+
 root=tk.Tk(className="Spotify Form")
 l1=tk.Label(root,text="Spotify Form",font=("Times New Roman",30),bg="SeaGreen1")
 
