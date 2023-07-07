@@ -1,0 +1,52 @@
+import TeachersManage.Display as td
+def Upd(l3=[]):
+      if l3==[]:
+           print("Database is Empty")
+           return l3      
+
+      ui=-1 
+      if(input("enter 1 to see all Teachers data before updatation else press any num to no see:")=="1"):
+           td.Disp(l3)
+
+      n=input("Enter Teacher id you want to Update:")
+      for i in range(len(l3)):
+           for j in range(len(l3[i])):
+                if l3[i][j]==f"id={n}":
+                     ui=i
+                     break
+               
+                     
+      if(ui!=-1):
+           print("Enter Teacher Updated details:")
+           n=input("Enter Teacher Name:")  
+           if n=="":
+                n=l3[ui][0]
+           a=input("Enter Teacher Age:")
+           if a=="":
+                a=l3[ui][1]
+           p=input("Enter Teacher phone:")
+           if p=="":
+                p=l3[ui][2]
+           d=input("Enter Teacher Department:")
+           if d=="":
+                d=l3[ui][3]
+           s=input("Enter Teacher Subject:")
+           if s=="":
+                s=l3[ui][4]
+           A=input("Enter Teacher Address:")
+           if A=="":
+                A=l3[ui][5]
+           l3[ui]=[f"Name={n}",f"Age={a}",f"Phone={p}",f"Department={d}",f"Subject={s}",f"Address={A}",f"{l3[ui][6]}"]
+           print("data updatation successfull!")
+           f=open("file2.txt","w")
+           for i in range(len(l3)):
+                f.writelines(f"{l3[i][0]},{l3[i][1]},{l3[i][2]},\
+{l3[i][3]},{l3[i][4]},{l3[i][5]},{l3[i][6]}\n") 
+           print()
+           if(input("enter 1 to see all Teachers data after updatation else press any num to no see:")=="1"):
+                td.Disp(l3)
+      else:
+           print(ui)
+           print("Teacher in not present in database")
+
+      return l3
