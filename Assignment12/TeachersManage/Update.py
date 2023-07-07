@@ -18,25 +18,25 @@ def Upd(l3=[]):
                      
       if(ui!=-1):
            print("Enter Teacher Updated details:")
-           n=input("Enter Teacher Name:")  
-           if n=="":
+           n="Name="+input("Enter Teacher Name:")  
+           if n=="Name=":
                 n=l3[ui][0]
-           a=input("Enter Teacher Age:")
-           if a=="":
+           a="Age="+input("Enter Teacher Age:")
+           if a=="Age=":
                 a=l3[ui][1]
-           p=input("Enter Teacher phone:")
-           if p=="":
+           p="PhoneNum="+input("Enter Teacher phone:")
+           if p=="PhoneNum=":
                 p=l3[ui][2]
-           d=input("Enter Teacher Department:")
-           if d=="":
+           d="Department="+input("Enter Teacher Department:")
+           if d=="Department=":
                 d=l3[ui][3]
-           s=input("Enter Teacher Subject:")
-           if s=="":
+           s="Subject="+input("Enter Teacher Subject:")
+           if s=="Subject=":
                 s=l3[ui][4]
-           A=input("Enter Teacher Address:")
-           if A=="":
+           A="Address="+input("Enter Teacher Address:")
+           if A=="Address=":
                 A=l3[ui][5]
-           l3[ui]=[f"Name={n}",f"Age={a}",f"Phone={p}",f"Department={d}",f"Subject={s}",f"Address={A}",f"{l3[ui][6]}"]
+           l3[ui]=[f"{n}",f"{a}",f"{p}",f"{d}",f"{s}",f"{A}",f"{l3[ui][6]}"]
            print("data updatation successfull!")
            f=open("file2.txt","w")
            for i in range(len(l3)):
