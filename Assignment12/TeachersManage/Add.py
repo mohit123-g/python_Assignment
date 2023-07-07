@@ -7,7 +7,7 @@ def AddStu(id):
        d=input("Enter Teacher Department:")
        s=input("Enter Teacher Subject:")
        A=input("Enter Teacher Address:")
-       ls.extend([f"Name={n}",f"Age={a}",f"Phone={p}",f"Department={d}",f"Subject={s}",f"Address={A}",f"id={id}"])
+       ls.extend([f"Name={n}",f"Age={a}",f"PhoneNum={p}",f"Department={d}",f"Subject={s}",f"Address={A}",f"id={id}"])
        # print(ls)
        f=open("file2.txt","+a")
        f.writelines(f"{ls[0]},{ls[1]},{ls[2]},\
