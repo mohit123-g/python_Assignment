@@ -33,7 +33,6 @@ Enter your choice:")
            if(ch=="1"):
                id+=1
                l1.append(sa.AddStu(id))  
-               print(l1)
            elif(ch=="2"):
                l1=(su.Upd(l1))
            elif(ch=="3"):
